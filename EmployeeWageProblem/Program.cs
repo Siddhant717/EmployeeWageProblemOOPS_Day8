@@ -8,8 +8,8 @@ namespace EmployeeWageProblem
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
 
-            CheckAttendance empwage = new CheckAttendance();
-            empwage.CalculateDailyEmpWage();
+            CheckAttendance wage = new CheckAttendance();
+            wage.EmployeeWage();
         }
     }
 }
