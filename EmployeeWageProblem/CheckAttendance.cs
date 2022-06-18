@@ -8,34 +8,34 @@ namespace EmployeeWageProblem
 {
     public class CheckAttendance
     {
-        public void EmployeeWage()
+        public void CalculateEmployeeWage()
         {
 
-           int FullDayHr = 8;
+            int FullDayHr = 8;
             int WagePerHr = 20;
             int totalWage = 0;
             int PartTimeHr = 4;
             Random random = new Random();
             int number = random.Next(0, 3);
-            if (number == 0)
+            switch (number)
             {
-                Console.WriteLine("Employee is absent");
-
-
-            }
-            else if (number == 1)
-            {
-                Console.WriteLine("Employee is present");
-                totalWage = FullDayHr * WagePerHr;
-
-            }
-            else
-            {
-                Console.WriteLine("Employee is present and part time employee");
-                totalWage = PartTimeHr * WagePerHr;
+                case 0:
+                    Console.WriteLine("Employee is absent");
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is present");
+                    totalWage = FullDayHr * WagePerHr;
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is present and part time employee");
+                    totalWage = PartTimeHr * WagePerHr;
+                    break;
 
             }
             Console.WriteLine("Employee's total wage  is " + totalWage);
+
+
+
         }
     }
 }
